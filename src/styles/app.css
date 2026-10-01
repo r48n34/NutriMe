@@ -1,0 +1,1440 @@
+.app-shell {
+  min-height: 100dvh;
+  background: #f7f9f3;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 224px;
+  background: #fcfcf6;
+  border-right: 1px solid #e3e8da;
+  padding: 31px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.sidebar > .logo {
+  margin: 0 7px;
+}
+.sidebar-caption {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #5b6652;
+  margin: 45px 12px 18px;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.sidebar nav > a {
+  padding: 13px 14px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #586351;
+  min-height: 45px;
+  transition: background 0.15s;
+}
+.sidebar nav > a:hover {
+  background: #f0f3e8;
+}
+.sidebar nav > a.active {
+  color: #315c42;
+  background: #e9efde;
+  font-weight: 600;
+}
+.sidebar .nav-arrow {
+  margin-left: auto;
+  opacity: 0;
+}
+.sidebar a.active .nav-arrow {
+  opacity: 1;
+  color: #506640;
+}
+.sidebar-note {
+  margin-top: auto;
+  text-align: center;
+  background: #f0f2e5;
+  border-radius: 9px;
+  position: relative;
+  padding: 53px 10px 18px;
+  max-height: 176px;
+}
+.sidebar-note .mascot {
+  position: absolute;
+  width: 92px;
+  height: 107px;
+  left: calc(50% - 46px);
+  top: -52px;
+}
+.sidebar-note > span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+.sidebar-note > span strong {
+  font-weight: 400;
+  color: #586641;
+  font-style: italic;
+}
+.sidebar-note > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 10px;
+  margin-top: 16px;
+  color: #4a683f;
+}
+.back-site {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #59634e;
+  margin: 28px 8px 0;
+}
+.back-site svg:last-child {
+  margin-left: auto;
+}
+.app-area {
+  margin-left: 224px;
+  min-width: 0;
+}
+.app-header {
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid #e4e9dc;
+  background: #f9fbf6;
+}
+.header-tagline {
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  color: #5a6254;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.demo-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: #57664e;
+  border-radius: 5px;
+  padding: 6px 9px;
+  background: #ecf1e6;
+}
+.demo-tag > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #80a963;
+}
+.header-date {
+  font-size: 10px;
+  color: #57654e;
+}
+.avatar {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #dfe8cf;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 15px;
+  color: #4e6b3e;
+  border: 2px solid #fcfdf9;
+}
+.mobile-logo,
+.mobile-nav {
+  display: none;
+}
+.app-content {
+  padding: 34px 40px 37px;
+  max-width: 1450px;
+  margin: auto;
+}
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 27px;
+}
+.page-title .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.6px;
+  margin-bottom: 10px;
+}
+.page-title h1 {
+  font-family: var(--serif);
+  font-size: 36px;
+  letter-spacing: -1.4px;
+  line-height: 1.22;
+  font-weight: 400;
+}
+.page-title p {
+  font-size: 11px;
+  margin-top: 9px;
+}
+.page-title-action {
+  flex-shrink: 0;
+}
+.card {
+  border: 1px solid #e3e8da;
+  border-radius: 11px;
+  background: #fffef9;
+  min-width: 0;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.section-heading h2 {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+}
+.section-heading .text-link {
+  font-size: 10px;
+  gap: 5px;
+}
+.welcome-banner {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+  padding: 26px 32px;
+  background: #e9efdb;
+  border: 1px solid #dce5cf;
+  border-radius: 11px;
+  min-height: 230px;
+  margin-bottom: 24px;
+}
+.banner-eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.6px;
+  color: #52653b;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.welcome-banner h2 {
+  font-family: var(--serif);
+  font-size: 37px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-top: 14px;
+}
+.welcome-banner h2 em {
+  color: #52653c;
+}
+.welcome-banner p {
+  font-size: 11px;
+  color: #58634a;
+  margin-top: 9px;
+}
+.welcome-banner .text-link {
+  font-size: 10px;
+  margin-top: 14px;
+}
+.banner-art {
+  position: absolute;
+  width: 260px;
+  height: 239px;
+  right: 128px;
+  bottom: -10px;
+}
+.banner-art .mascot {
+  width: 195px;
+  height: 225px;
+  position: absolute;
+  left: 37px;
+  top: 2px;
+  z-index: 1;
+  transform: rotate(3deg);
+}
+.banner-circle {
+  position: absolute;
+  background: #dde6cb;
+  width: 235px;
+  height: 211px;
+  border-radius: 50%;
+  top: 20px;
+  left: 12px;
+}
+.banner-spark {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  color: #5d6641;
+  font-size: 24px;
+  z-index: 1;
+}
+.banner-leaf {
+  position: absolute;
+  right: -13px;
+  bottom: 20px;
+  transform: rotate(25deg);
+  color: #536246;
+}
+.banner-streak {
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  background: #f7f9eabd;
+  border: 1px solid #d9e2c8;
+  border-radius: 9px;
+  padding: 17px 16px;
+  width: 106px;
+  position: relative;
+}
+.banner-streak svg {
+  color: #58673d;
+}
+.banner-streak strong {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.2;
+}
+.banner-streak span {
+  font-size: 8px;
+  color: #596149;
+}
+.dashboard-top-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+.health-card,
+.daily-product {
+  padding: 21px 23px;
+}
+.health-content {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+  min-width: 0;
+}
+.health-ring {
+  width: 132px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.health-ring > span {
+  font-size: 8px;
+  color: #5b6452;
+  display: block;
+  margin-top: 13px;
+}
+.progress-ring {
+  width: 132px;
+  height: 132px;
+  position: relative;
+}
+.progress-ring svg {
+  height: 100%;
+  width: 100%;
+}
+.progress-ring > div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.progress-ring strong {
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 400;
+}
+.progress-ring strong span {
+  font-size: 17px;
+  color: #5c6552;
+}
+.progress-ring small {
+  font-size: 9px;
+  color: #5c664e;
+  margin-top: 4px;
+}
+.progress-ring.small {
+  width: 100px;
+  height: 100px;
+}
+.progress-ring.small strong {
+  font-size: 22px;
+}
+.task-list {
+  min-width: 0;
+  flex: 1;
+}
+.task-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #eef0e6;
+  padding: 9px 0;
+}
+.task-row:last-child {
+  border-bottom: 0;
+}
+.task-check {
+  width: 23px;
+  height: 23px;
+  border: 1px solid #d0dbca;
+  border-radius: 50%;
+  background: #fffdf5;
+  display: grid;
+  place-items: center;
+  color: #fcfff5;
+  flex-shrink: 0;
+  padding: 0;
+}
+.task-check:hover {
+  background: #ecf2e3;
+}
+.task-check.complete {
+  background: #6f9665;
+  border-color: #4a6643;
+}
+.task-text {
+  background: transparent;
+  text-align: left;
+  padding: 0;
+  min-width: 0;
+  flex: 1;
+}
+.task-text strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.task-text span {
+  display: block;
+  font-size: 8px;
+  margin-top: 3px;
+  line-height: 1.4;
+  color: #59644f;
+}
+.task-row > svg {
+  width: 12px;
+  color: #5b5f54;
+}
+.task-row.is-done .task-text strong {
+  color: #56614d;
+}
+.health-note {
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid #eef0e6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  color: #5a6850;
+}
+.health-note svg {
+  color: #556748;
+}
+.daily-product-body {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 190px;
+}
+.daily-product-body > .product-art {
+  width: 143px;
+  height: 156px;
+  border-radius: 9px;
+}
+.daily-product-body > div {
+  min-width: 0;
+  flex: 1;
+}
+.daily-product-body .eyebrow {
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+.daily-product-body h3 {
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  margin-top: 10px;
+}
+.daily-product-body p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin-top: 11px;
+}
+.daily-product-body .text-link {
+  font-size: 9px;
+  margin-top: 14px;
+  gap: 3px;
+}
+.daily-product-body small {
+  display: block;
+  font-size: 8px;
+  color: #5c6652;
+  margin-top: 10px;
+}
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.meal-card {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fffef9;
+  text-align: left;
+  padding: 0;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  min-width: 0;
+}
+.meal-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+.meal-card-art {
+  height: 163px;
+  position: relative;
+  overflow: hidden;
+}
+.meal-card-art svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.meal-time {
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #fffdf0e8;
+  color: #58654d;
+  font-size: 8px;
+  padding: 6px 8px;
+}
+.meal-card-body {
+  padding: 17px 19px 18px;
+}
+.meal-card-body > .eyebrow {
+  font-size: 7px;
+  letter-spacing: 1.4px;
+}
+.meal-card-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  margin-top: 9px;
+}
+.meal-card h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+.round-arrow {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  background: #f0f3e7;
+  border: 1px solid #e1e7d5;
+  border-radius: 50%;
+  color: #516940;
+  flex-shrink: 0;
+}
+.meal-card p {
+  font-size: 9px;
+  line-height: 1.8;
+  margin-top: 9px;
+  max-width: 250px;
+}
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 21px;
+  margin-top: 24px;
+}
+.coach-nudge,
+.progress-nudge {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  border: 1px solid #e0e5d4;
+  background: #f0f3e8;
+  border-radius: 9px;
+  padding: 24px;
+}
+.coach-nudge .eyebrow,
+.progress-nudge .eyebrow {
+  font-size: 7px;
+  letter-spacing: 1.1px;
+}
+.coach-nudge h3,
+.progress-nudge h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  margin-top: 7px;
+  letter-spacing: -0.5px;
+}
+.coach-nudge p {
+  font-size: 9px;
+  margin-top: 7px;
+}
+.coach-nudge > svg {
+  margin-left: auto;
+  color: #586847;
+  width: 18px;
+}
+.progress-nudge {
+  background: #f8f6ec;
+  justify-content: space-between;
+}
+.progress-nudge > .text-link,
+.progress-nudge .text-link {
+  font-size: 9px;
+  margin-top: 11px;
+}
+.progress-nudge > svg {
+  width: 100px;
+  height: 56px;
+}
+.app-footer {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 40px 25px;
+  font-size: 8px;
+  color: #5b6652;
+  gap: 20px;
+}
+.app-footer > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.storage-notice {
+  padding: 12px 40px;
+  background: #f7efd5;
+  font-size: 11px;
+  color: #675f3b;
+}
+.tabs {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  overflow-x: auto;
+}
+.tabs > button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 13px;
+  border-radius: 6px;
+  font-size: 10px;
+  background: transparent;
+  white-space: nowrap;
+  color: #58654e;
+}
+.tabs > button.active {
+  background: #e4ecd8;
+  color: #436038;
+}
+.tabs > button:not(.active):hover {
+  background: #edf1e6;
+}
+@media (min-width: 1600px) {
+  .app-content {
+    padding-top: 45px;
+  }
+  .welcome-banner {
+    min-height: 260px;
+  }
+  .banner-art {
+    right: 160px;
+    height: 270px;
+    width: 310px;
+  }
+  .banner-art .mascot {
+    width: 230px;
+    height: 260px;
+    top: 0;
+  }
+  .banner-circle {
+    width: 270px;
+    height: 240px;
+  }
+  .welcome-banner h2 {
+    font-size: 43px;
+  }
+  .meal-card-art {
+    height: 190px;
+  }
+}
+@media (max-height: 760px) and (min-width: 901px) {
+  .sidebar-caption {
+    margin-top: 28px;
+  }
+  .sidebar-note {
+    margin-top: 75px;
+  }
+  .sidebar {
+    overflow-y: auto;
+  }
+  .sidebar-note > .mascot {
+    top: -54px;
+  }
+  .sidebar nav > a {
+    padding: 11px 14px;
+    min-height: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 202px;
+    padding: 29px 17px 19px;
+  }
+  .sidebar > .logo {
+    font-size: 27px;
+  }
+  .sidebar nav > a {
+    font-size: 11px;
+    gap: 10px;
+    padding: 12px;
+  }
+  .app-area {
+    margin-left: 202px;
+  }
+  .app-content {
+    padding: 29px 27px;
+  }
+  .app-header {
+    padding: 0 27px;
+  }
+  .page-title h1 {
+    font-size: 32px;
+  }
+  .health-card,
+  .daily-product {
+    padding: 19px;
+  }
+  .health-content {
+    gap: 13px;
+  }
+  .health-ring {
+    width: 108px;
+  }
+  .progress-ring {
+    width: 108px;
+    height: 108px;
+  }
+  .task-text strong {
+    font-size: 9px;
+  }
+  .task-text span {
+    font-size: 7px;
+  }
+  .daily-product-body {
+    gap: 14px;
+  }
+  .daily-product-body > .product-art {
+    width: 113px;
+    height: 140px;
+  }
+  .daily-product-body h3 {
+    font-size: 20px;
+  }
+  .banner-art {
+    right: 114px;
+  }
+  .dashboard-top-grid {
+    gap: 18px;
+  }
+  .meal-grid {
+    gap: 17px;
+  }
+  .meal-card-art {
+    height: 145px;
+  }
+  .meal-card-body {
+    padding: 15px;
+  }
+  .meal-card h3 {
+    font-size: 18px;
+  }
+  .coach-nudge,
+  .progress-nudge {
+    padding: 19px;
+    gap: 14px;
+  }
+  .coach-nudge h3,
+  .progress-nudge h3 {
+    font-size: 17px;
+  }
+  .coach-nudge .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .progress-nudge > svg {
+    width: 75px;
+  }
+  .app-footer {
+    padding: 17px 27px 25px;
+  }
+}
+@media (max-width: 1000px) {
+  .dashboard-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .health-content {
+    gap: 30px;
+  }
+  .health-ring {
+    width: 138px;
+  }
+  .progress-ring {
+    width: 138px;
+    height: 138px;
+  }
+  .task-text strong {
+    font-size: 11px;
+  }
+  .task-text span {
+    font-size: 9px;
+  }
+  .daily-product-body {
+    height: 150px;
+    gap: 25px;
+  }
+  .daily-product-body > .product-art {
+    width: 145px;
+    height: 150px;
+  }
+  .daily-product-body h3 {
+    font-size: 25px;
+  }
+  .daily-product-body p {
+    max-width: 260px;
+    font-size: 11px;
+  }
+  .daily-product-body .text-link {
+    font-size: 10px;
+  }
+  .meal-grid {
+    gap: 13px;
+  }
+  .meal-card-art {
+    height: 120px;
+  }
+  .meal-card h3 {
+    font-size: 17px;
+  }
+  .meal-card p {
+    font-size: 8px;
+  }
+  .meal-card-body {
+    padding: 13px;
+  }
+  .round-arrow {
+    width: 23px;
+    height: 23px;
+  }
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .welcome-banner h2 {
+    font-size: 33px;
+  }
+  .banner-art {
+    right: 73px;
+    width: 185px;
+  }
+  .banner-art .mascot {
+    width: 170px;
+    height: 200px;
+    left: 0;
+    top: 35px;
+  }
+  .banner-circle {
+    width: 180px;
+    height: 195px;
+    left: -7px;
+  }
+  .banner-streak {
+    width: 85px;
+    padding: 13px 10px;
+  }
+  .banner-streak strong {
+    font-size: 17px;
+  }
+  .banner-streak span {
+    font-size: 7px;
+  }
+  .banner-spark {
+    left: -14px;
+  }
+  .banner-leaf {
+    right: -5px;
+    width: 34px;
+  }
+  .page-title {
+    gap: 15px;
+  }
+  .page-title-action .button {
+    font-size: 10px;
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .sidebar > .logo {
+    font-size: 24px;
+    margin: 0 9px;
+    gap: 7px;
+  }
+  .sidebar .logo-symbol {
+    width: 28px;
+    height: 28px;
+  }
+  .sidebar .logo-symbol > svg {
+    width: 19px;
+  }
+  .sidebar nav > a {
+    font-size: 10px;
+    gap: 9px;
+  }
+  .sidebar nav > a > svg {
+    width: 17px;
+  }
+  .sidebar-caption {
+    font-size: 7px;
+    margin: 37px 11px 16px;
+  }
+  .sidebar-note > span {
+    font-size: 16px;
+  }
+  .app-area {
+    margin-left: 180px;
+  }
+  .app-content {
+    padding: 28px 24px;
+  }
+  .app-header {
+    padding: 0 24px;
+    height: 74px;
+  }
+  .header-right {
+    gap: 15px;
+  }
+  .page-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .page-title h1 {
+    font-size: 33px;
+  }
+  .page-title p {
+    font-size: 11px;
+  }
+  .welcome-banner {
+    padding: 23px;
+    min-height: 225px;
+  }
+  .app-footer {
+    padding: 18px 24px;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+  .health-ring {
+    width: 120px;
+  }
+  .progress-ring {
+    width: 120px;
+    height: 120px;
+  }
+  .health-content {
+    gap: 19px;
+  }
+}
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+  .app-area {
+    margin-left: 0;
+  }
+  .app-header {
+    height: 72px;
+    padding: 0 21px;
+  }
+  .header-tagline,
+  .header-date {
+    display: none;
+  }
+  .mobile-logo {
+    display: block;
+  }
+  .mobile-logo .logo {
+    font-size: 25px;
+  }
+  .mobile-logo .logo-symbol {
+    width: 29px;
+    height: 29px;
+  }
+  .mobile-logo .logo-symbol > svg {
+    width: 19px;
+  }
+  .header-right {
+    gap: 11px;
+  }
+  .demo-tag {
+    font-size: 8px;
+    padding: 5px 7px;
+  }
+  .avatar {
+    width: 29px;
+    height: 29px;
+    font-size: 13px;
+  }
+  .app-content {
+    padding: 27px 19px 26px;
+  }
+  .page-title {
+    gap: 15px;
+    margin-bottom: 23px;
+  }
+  .page-title h1 {
+    font-size: 32px;
+    letter-spacing: -1.1px;
+  }
+  .page-title .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.35px;
+    margin-bottom: 10px;
+  }
+  .page-title p {
+    font-size: 10px;
+    line-height: 1.8;
+    max-width: 330px;
+  }
+  .page-title-action .button {
+    font-size: 10px;
+    min-height: 36px;
+    padding: 9px 13px;
+  }
+  .welcome-banner {
+    padding: 22px 21px;
+    min-height: 241px;
+    margin-bottom: 19px;
+  }
+  .welcome-banner h2 {
+    font-size: 31px;
+    letter-spacing: -1px;
+    margin-top: 15px;
+  }
+  .banner-eyebrow {
+    font-size: 6px;
+    letter-spacing: 1px;
+    gap: 4px;
+  }
+  .banner-eyebrow svg {
+    width: 14px;
+  }
+  .welcome-banner > div:first-child {
+    max-width: 215px;
+    position: relative;
+    z-index: 2;
+  }
+  .welcome-banner p {
+    font-size: 9px;
+    max-width: 155px;
+    line-height: 1.8;
+  }
+  .welcome-banner .text-link {
+    font-size: 9px;
+    margin-top: 14px;
+  }
+  .banner-art {
+    right: -14px;
+    height: 220px;
+    width: 170px;
+    bottom: -11px;
+  }
+  .banner-art .mascot {
+    width: 162px;
+    height: 188px;
+    left: 0;
+    top: 26px;
+    transform: rotate(-3deg);
+  }
+  .banner-circle {
+    width: 163px;
+    height: 178px;
+    top: 37px;
+    left: 0;
+  }
+  .banner-spark {
+    left: -6px;
+    top: 18px;
+    font-size: 18px;
+  }
+  .banner-leaf {
+    right: 9px;
+    bottom: 28px;
+    width: 22px;
+  }
+  .banner-streak {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: auto;
+    display: flex;
+    gap: 5px;
+    padding: 7px 8px;
+    background: #f8faee;
+    border-radius: 5px;
+    z-index: 2;
+  }
+  .banner-streak strong {
+    font-size: 10px;
+    font-family: "DM Sans", sans-serif;
+  }
+  .banner-streak svg {
+    width: 12px;
+    height: 12px;
+  }
+  .banner-streak span {
+    display: none;
+  }
+  .dashboard-top-grid {
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .health-card,
+  .daily-product {
+    padding: 19px 17px;
+  }
+  .section-heading {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .section-heading h2 {
+    font-size: 12px;
+  }
+  .section-heading .text-link {
+    font-size: 9px;
+    gap: 3px;
+  }
+  .health-content {
+    gap: 17px;
+    align-items: flex-start;
+  }
+  .health-ring {
+    width: 91px;
+    margin-top: 29px;
+  }
+  .progress-ring {
+    width: 91px;
+    height: 91px;
+  }
+  .progress-ring strong {
+    font-size: 24px;
+  }
+  .progress-ring strong span {
+    font-size: 14px;
+  }
+  .progress-ring small {
+    font-size: 7px;
+  }
+  .health-ring > span {
+    font-size: 7px;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+  .task-text strong {
+    font-size: 9px;
+  }
+  .task-text span {
+    font-size: 7px;
+  }
+  .task-row {
+    gap: 7px;
+    padding: 9px 0;
+  }
+  .task-row > svg {
+    display: none;
+  }
+  .task-check {
+    height: 21px;
+    width: 21px;
+  }
+  .task-check > svg {
+    width: 13px;
+  }
+  .health-note {
+    font-size: 7px;
+    gap: 5px;
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+  .health-note > svg {
+    width: 12px;
+  }
+  .daily-product-body {
+    height: 141px;
+    gap: 17px;
+  }
+  .daily-product-body > .product-art {
+    width: 114px;
+    height: 134px;
+  }
+  .daily-product-body h3 {
+    font-size: 20px;
+    margin-top: 7px;
+  }
+  .daily-product-body .eyebrow {
+    font-size: 6px;
+    letter-spacing: 0.9px;
+  }
+  .daily-product-body p {
+    font-size: 9px;
+    margin-top: 8px;
+    line-height: 1.75;
+  }
+  .daily-product-body .text-link {
+    font-size: 8px;
+    margin-top: 10px;
+  }
+  .daily-product-body small {
+    font-size: 7px;
+    margin-top: 8px;
+  }
+  .meal-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .meal-card {
+    display: grid;
+    grid-template-columns: 124px 1fr;
+    min-height: 143px;
+    align-items: stretch;
+  }
+  .meal-card-art {
+    height: 100%;
+    min-height: 143px;
+  }
+  .meal-card-art svg {
+    height: 100%;
+    width: 100%;
+  }
+  .meal-card-body {
+    padding: 16px 14px;
+  }
+  .meal-card h3 {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+  .meal-card p {
+    font-size: 9px;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+  .meal-card .round-arrow {
+    display: none;
+  }
+  .meal-card .meal-time {
+    font-size: 7px;
+    right: 8px;
+    top: 8px;
+    padding: 5px 6px;
+    gap: 4px;
+  }
+  .meal-card .meal-time > svg {
+    width: 10px;
+  }
+  .meal-card-body > .eyebrow {
+    font-size: 6px;
+  }
+  .meal-card-body > div {
+    margin-top: 8px;
+  }
+  .dashboard-bottom-grid {
+    gap: 14px;
+    margin-top: 21px;
+  }
+  .coach-nudge,
+  .progress-nudge {
+    padding: 21px 17px;
+    gap: 13px;
+  }
+  .coach-nudge .eyebrow,
+  .progress-nudge .eyebrow {
+    font-size: 6px;
+    letter-spacing: 0.9px;
+  }
+  .coach-nudge h3,
+  .progress-nudge h3 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-top: 7px;
+  }
+  .coach-nudge p {
+    font-size: 8px;
+    line-height: 1.7;
+  }
+  .coach-nudge .feature-icon {
+    width: 37px;
+    height: 37px;
+    border-radius: 10px;
+  }
+  .coach-nudge .feature-icon > svg {
+    width: 21px;
+  }
+  .coach-nudge > svg {
+    width: 16px;
+  }
+  .progress-nudge > svg {
+    width: 90px;
+    height: 49px;
+  }
+  .app-footer {
+    padding: 12px 21px 103px;
+    font-size: 7px;
+    gap: 12px;
+  }
+  .mobile-nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 74px;
+    padding: 7px 7px max(7px, env(safe-area-inset-bottom));
+    background: #fffef7f5;
+    border-top: 1px solid #e3e8d9;
+    backdrop-filter: blur(14px);
+    z-index: 20;
+  }
+  .mobile-nav > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 58px;
+    min-height: 49px;
+    border-radius: 8px;
+    font-size: 9px;
+    color: #5d6652;
+    text-transform: capitalize;
+  }
+  .mobile-nav > a.active {
+    color: #326044;
+    background: #ecf1e3;
+  }
+  .mobile-nav > a.active svg {
+    stroke-width: 2.2;
+  }
+  .storage-notice {
+    padding: 12px 20px;
+    font-size: 10px;
+  }
+  .tabs > button {
+    font-size: 9px;
+    gap: 5px;
+    padding: 9px 11px;
+  }
+  .tabs > button > svg {
+    width: 14px;
+  }
+}
+@media (max-width: 370px) {
+  .app-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .page-title h1 {
+    font-size: 29px;
+  }
+  .health-content {
+    gap: 10px;
+  }
+  .health-ring {
+    width: 80px;
+  }
+  .progress-ring {
+    width: 80px;
+    height: 80px;
+  }
+  .task-text strong {
+    font-size: 8px;
+  }
+  .health-card,
+  .daily-product {
+    padding: 18px 15px;
+  }
+  .health-note {
+    font-size: 6px;
+  }
+  .daily-product-body > .product-art {
+    width: 100px;
+  }
+  .meal-card {
+    grid-template-columns: 111px 1fr;
+  }
+  .meal-card h3 {
+    font-size: 17px;
+  }
+  .banner-art {
+    right: -26px;
+  }
+  .welcome-banner {
+    padding: 20px 18px;
+  }
+}

@@ -1,0 +1,155 @@
+/* Keep meaningful text comfortable to read across the compact app layouts. */
+.page-title p,
+.plan-card-content p,
+.expert-content p,
+.empty-state p,
+.message > div > p {
+  font-size: 12px;
+}
+.task-text strong {
+  font-size: 12px;
+}
+.task-text span,
+.health-note,
+.health-ring > span,
+.daily-product-body small {
+  font-size: 10px;
+}
+.meal-card p,
+.daily-product-body p,
+.product-card-content > p,
+.shop-intro p {
+  font-size: 11px;
+}
+.task-row.is-done .task-text strong {
+  color: #596e4f;
+}
+.section-heading .text-link,
+.daily-product-body .text-link,
+.plan-card-content > .text-link {
+  font-size: 11px;
+}
+.choice-option strong,
+.field-label,
+.choice-group legend,
+.cart-item > div:nth-child(2) > strong {
+  font-size: 12px;
+}
+.choice-option small,
+.chat-prompts button,
+.coach-small-note p,
+.expert-meta > span {
+  font-size: 10px;
+}
+.preference-card dl > div,
+.booking-item > div > strong,
+.order-item > p,
+.reset-section p {
+  font-size: 11px;
+}
+.fine-print {
+  color: #62735e;
+}
+.chat-input:focus-within {
+  outline: 2px solid #8aab52;
+  outline-offset: 3px;
+}
+.mobile-nav > a {
+  font-size: 10px;
+}
+@media (max-width: 700px) {
+  .hero-copy h1 {
+    font-size: 46px;
+    letter-spacing: -2.2px;
+  }
+  .health-ring {
+    width: 84px;
+  }
+  .health-ring > span {
+    font-size: 8px;
+  }
+  .health-note {
+    font-size: 9px;
+    line-height: 1.7;
+    align-items: flex-start;
+  }
+  .task-check {
+    width: 25px;
+    height: 25px;
+  }
+  .task-text strong {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .task-text span {
+    font-size: 9px;
+  }
+  .task-row {
+    gap: 8px;
+    padding: 10px 0;
+  }
+  .daily-product-body {
+    height: auto;
+    min-height: 155px;
+  }
+  .daily-product-body p,
+  .meal-card p,
+  .shop-intro p {
+    font-size: 10px;
+  }
+  .daily-product-body small {
+    font-size: 9px;
+  }
+  .page-title p {
+    font-size: 11px;
+  }
+  .section-heading .text-link,
+  .daily-product-body .text-link {
+    font-size: 10px;
+  }
+  .choice-option strong,
+  .field-label,
+  .choice-group legend {
+    font-size: 11px;
+  }
+  .choice-option small {
+    font-size: 10px;
+  }
+  .product-card-content > p {
+    font-size: 10px;
+    min-height: 35px;
+  }
+  .product-bottom > .button {
+    font-size: 9px;
+  }
+  .product-card-art > .product-art {
+    height: 155px;
+  }
+  .chat-prompts button {
+    font-size: 9px;
+  }
+  .message > div > p {
+    font-size: 12px;
+  }
+  .expert-content p,
+  .coach-small-note p {
+    font-size: 10px;
+  }
+  .expert-meta > span {
+    font-size: 9px;
+  }
+  .expert-art {
+    min-height: 330px;
+  }
+  .expert-content > .button {
+    font-size: 9px;
+  }
+  .preference-card dl > div {
+    font-size: 10px;
+  }
+  .booking-item > div > strong,
+  .order-item > p,
+  .reset-section p {
+    font-size: 11px;
+  }
+}
