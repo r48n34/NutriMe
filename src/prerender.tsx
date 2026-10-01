@@ -3,10 +3,10 @@ import { renderToString } from "react-dom/server";
 import { MemoryRouter } from "react-router";
 import { AppContent } from "./App";
 
-export function renderHomepage() {
+export function renderPublicPage(path = "/") {
   return renderToString(
     <StrictMode>
-      <MemoryRouter initialEntries={["/"]}>
+      <MemoryRouter initialEntries={[path]}>
         <AppContent />
       </MemoryRouter>
     </StrictMode>,

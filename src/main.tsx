@@ -8,6 +8,8 @@ import "@fontsource/fraunces/400.css";
 import "@fontsource/fraunces/400-italic.css";
 import "./index.css";
 import "./styles/polish.css";
+import "./styles/pricing.css";
+import "./styles/nutrition.css";
 import App from "./App";
 
 const root = document.getElementById("root")!;

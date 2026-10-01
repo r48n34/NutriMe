@@ -10,17 +10,17 @@
     <path d="m16 48 25-25m-15 16 0-9m9 1 9 0" stroke-width="3" stroke-linecap="round"/>
   </g>
   <text x="116" y="84" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#28634d">nutri<tspan fill="#7a9b60">me</tspan></text>
-  <text x="60" y="155" font-family="Arial, sans-serif" font-size="15" letter-spacing="3" fill="#62735e">SMALL STEPS. REAL LIFE.</text>
-  <text x="56" y="244" font-family="Georgia, serif" font-size="66" fill="#294939">A healthier you.</text>
-  <text x="56" y="320" font-family="Georgia, serif" font-size="66" font-style="italic" fill="#28634d">Made simpler.</text>
-  <text x="60" y="383" font-family="Arial, sans-serif" font-size="23" fill="#62735e">Meals, movement and a moment to recharge.</text>
-  <text x="60" y="418" font-family="Arial, sans-serif" font-size="23" fill="#62735e">One everyday plan that fits your life.</text>
+  <text x="60" y="155" font-family="Arial, sans-serif" font-size="15" letter-spacing="3" fill="#62735e">PERSONALISED NUTRITION</text>
+  <text x="56" y="244" font-family="Georgia, serif" font-size="66" fill="#294939">Your body.</text>
+  <text x="56" y="320" font-family="Georgia, serif" font-size="66" font-style="italic" fill="#28634d">Your formula.</text>
+  <text x="60" y="383" font-family="Arial, sans-serif" font-size="23" fill="#62735e">30 personalised daily packs.</text>
+  <text x="60" y="418" font-family="Arial, sans-serif" font-size="23" fill="#62735e">Delivered to your door every month.</text>
   <rect x="60" y="466" width="299" height="42" rx="21" fill="#e4ebda"/>
   <text x="81" y="493" font-family="Arial, sans-serif" font-size="14" letter-spacing="1" fill="#28634d">MADE FOR LIFE IN HONG KONG</text>
   <g clip-path="url(#portrait)">
     <image href="nutrime-mascot.png" x="747.91" y="-60.17" width="978.78" height="544.30"/>
   </g>
   <rect y="560" width="1200" height="70" fill="#28634d"/>
-  <text x="60" y="603" font-family="Arial, sans-serif" font-size="21" fill="#f6f3e9">Good food · Feel-good movement · Better rest</text>
+  <text x="60" y="603" font-family="Arial, sans-serif" font-size="21" fill="#f6f3e9">AI assessment · Daily packs · NutriTracker</text>
   <text x="1020" y="603" font-family="Arial, sans-serif" font-size="19" fill="#dce7ce">NutriMe</text>
 </svg>

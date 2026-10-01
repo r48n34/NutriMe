@@ -4,6 +4,7 @@ import { DemoProvider } from "./state/DemoProvider";
 import { ToastProvider } from "./state/ToastProvider";
 import { AppShell } from "./components/AppShell";
 import { Landing } from "./pages/Landing";
+import { Pricing } from "./pages/Pricing";
 import { Dashboard } from "./pages/Dashboard";
 import { Personalize } from "./pages/Personalize";
 import { Plan } from "./pages/Plan";
@@ -14,11 +15,16 @@ import { Profile } from "./pages/Profile";
 import { updatePageSeo } from "./utils/seo-dom";
 
 function RouteEffects() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const frame = window.requestAnimationFrame(() => {
+      const target = hash ? document.getElementById(hash.slice(1)) : null;
+      if (target) target.scrollIntoView();
+      else window.scrollTo(0, 0);
+    });
     updatePageSeo(pathname);
-  }, [pathname]);
+    return () => window.cancelAnimationFrame(frame);
+  }, [pathname, hash]);
   return null;
 }
 
@@ -29,6 +35,7 @@ export function AppContent() {
         <RouteEffects />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/app" element={<AppShell />}>
             <Route index element={<Dashboard />} />
             <Route path="personalize" element={<Personalize />} />

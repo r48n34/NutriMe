@@ -1,0 +1,71 @@
+.nutrition-modules {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nutrition-modules .pillar-art {
+  height: 240px;
+}
+
+.nutrition-modules .pillar-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.nutrition-modules .pillar-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.nutrition-modules .pillar-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px;
+}
+
+.nutrition-modules h3 {
+  font-size: 26px;
+}
+
+.nutrition-modules p {
+  font-size: 14px;
+  min-height: 0;
+}
+
+.nutrition-modules .nutrition-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  color: var(--green);
+  font-size: 12px;
+}
+
+.nutrition-benefit svg {
+  margin-top: 3px;
+}
+
+@media (max-width: 900px) {
+  .nutrition-modules .pillar-card-content {
+    padding: 22px;
+  }
+
+  .nutrition-modules h3 {
+    font-size: 24px;
+  }
+
+  .nutrition-modules .pillar-art {
+    height: 190px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nutrition-modules {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-modules .pillar-art {
+    height: 225px;
+  }
+}

@@ -4,15 +4,21 @@ export const SITE = {
   language: "en-HK",
   locale: "en_HK",
   description:
-    "A healthier you, made simpler. Discover everyday meal ideas, feel-good movement and better rest with NutriMe, made for life in Hong Kong.",
+    "Your body, your formula. Discover NutriMe's personalised nutrition subscription concept: AI assessment, 30 daily tear-packs delivered monthly and NutriTracker support.",
   image: "/social-card.png",
-  imageAlt: "NutriMe — A healthier you, made simpler. Me, the green-capped wellness companion.",
+  imageAlt: "NutriMe — Your body, your formula. Personalised nutrition delivered monthly.",
 } as const;
 
 export const SEO_PAGES: Record<string, { title: string; description: string; index: boolean }> = {
   "/": {
-    title: "NutriMe — Everyday food, movement & wellbeing",
+    title: "NutriMe — Personalised nutrition delivered monthly",
     description: SITE.description,
+    index: true,
+  },
+  "/pricing": {
+    title: "Free, Plus & Pro monthly plans | NutriMe pricing",
+    description:
+      "Compare NutriMe's proposed Free, Plus and Pro plans. Plus at HK$238 and Pro at HK$438 include personalised daily packs, monthly delivery and NutriTracker. Pro adds nutritionist consultations.",
     index: true,
   },
   "/app": {

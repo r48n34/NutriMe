@@ -39,18 +39,10 @@ export function seoPlugin(): Plugin {
         throw new Error("SEO build requires an index.html asset.");
       }
       const html = index.source;
-      // Social crawlers often do not run JavaScript. Emit a head for each direct app URL.
-      for (const path of Object.keys(SEO_PAGES).filter((path) => path !== "/")) {
-        this.emitFile({
-          type: "asset",
-          fileName: `${path.slice(1)}/index.html`,
-          source: withSeo(html, path),
-        });
-      }
       this.emitFile({ type: "asset", fileName: "sitemap.xml", source: renderSitemap() });
       this.emitFile({ type: "asset", fileName: "robots.txt", source: renderRobots() });
 
-      // Render the existing homepage, including its headings and links, for search crawlers.
+      // Render public pages so headings, plan details and links are readable without JavaScript.
       const server = await createServer({
         root,
         configFile: false,
@@ -59,22 +51,29 @@ export function seoPlugin(): Plugin {
         appType: "custom",
       });
       try {
-        const { renderHomepage } = await server.ssrLoadModule("/src/prerender.tsx");
-        let homepage: string = renderHomepage();
-        // The development SSR loader returns source asset URLs. Use their production filenames.
-        for (const asset of Object.values(bundle)) {
-          if (asset.type !== "asset") continue;
-          for (const original of asset.originalFileNames) {
-            homepage = homepage.replaceAll(
-              `/${original.replace(/\\/g, "/")}`,
-              `/${asset.fileName}`,
+        const { renderPublicPage } = await server.ssrLoadModule("/src/prerender.tsx");
+        for (const [path, page] of Object.entries(SEO_PAGES)) {
+          let source = withSeo(html, path);
+          if (page.index) {
+            let content: string = renderPublicPage(path);
+            // The development SSR loader returns source asset URLs. Use production filenames.
+            for (const asset of Object.values(bundle)) {
+              if (asset.type !== "asset") continue;
+              for (const original of asset.originalFileNames) {
+                content = content.replaceAll(
+                  `/${original.replace(/\\/g, "/")}`,
+                  `/${asset.fileName}`,
+                );
+              }
+            }
+            source = source.replace(
+              '<div id="root"></div>',
+              () => `<div id="root" data-prerendered>${content}</div>`,
             );
           }
+          if (path === "/") index.source = source;
+          else this.emitFile({ type: "asset", fileName: `${path.slice(1)}/index.html`, source });
         }
-        index.source = html.replace(
-          '<div id="root"></div>',
-          () => `<div id="root" data-prerendered>${homepage}</div>`,
-        );
       } finally {
         await server.close();
       }

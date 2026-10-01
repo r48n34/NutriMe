@@ -1,6 +1,6 @@
 # NutriMe
 
-**A healthier you, made simpler.** A responsive public website and connected wellness app demo for everyday Hong Kong life, built with React, TypeScript and Vite.
+**Your body, your formula — personalised nutrition delivered monthly.** A responsive public website for NutriMe's C2B (made-to-order) subscription concept, built with React, TypeScript and Vite. The public pages describe a 3-minute AI health assessment, personalised monthly daily tear-packs and the NutriTracker companion app. These services are planned; the connected wellness app remains an exploratory demo.
 
 ## Try it locally
 
@@ -68,17 +68,21 @@ If pnpm is unavailable in a restricted Windows shell, installed commands can be 
 - `src/state/`: React providers and shared hooks.
 - `src/styles/`: responsive website, app and feature layouts.
 
-Routes are `/`, `/app`, `/app/personalize`, `/app/plan`, `/app/shop`, `/app/coach`, `/app/progress` and `/app/profile`. The production build generates matching HTML files; the Vercel configuration and local preview server serve them at these URLs.
+Routes are `/`, `/pricing`, `/app`, `/app/personalize`, `/app/plan`, `/app/shop`, `/app/coach`, `/app/progress` and `/app/profile`. The production build generates matching HTML files; the Vercel configuration and local preview server serve them at these URLs.
+
+## Draft monthly pricing
+
+The homepage includes a compact pricing section, and `/pricing` shows the full proposed plans: Free at HK$0, Plus at HK$238 and Pro at HK$438 per month. Both paid plans include a customised dispenser box containing 30 individual daily tear-packs, printed with the subscriber's name, daily formula and motivational health quotes, delivered to their doorstep every month. Plus includes the proposed AI assessment and NutriTracker intake tracking, habit rewards and certified-nutritionist messaging; Pro adds a monthly 30-minute nutritionist consultation and goal/formula review. Edit `src/data/pricing.ts` for the shared prices, benefits, features and FAQs, and `src/data/nutrition.ts` for the homepage product modules. All paid inclusions are proposals. Buttons preview existing demo features; no subscription or payment is created.
 
 ## Search and link previews
 
 `src/data/seo.ts` is the shared source of the NutriMe name, public domain, descriptions and page titles. The canonical domain is `https://nutrime-zeta.vercel.app`; update `SITE.url` when moving to another domain, then rebuild.
 
 - Each page includes a title, description, canonical URL, Open Graph tags and an X/Twitter large-image card. The public 1200 × 630 PNG is `public/social-card.png`, using the existing mascot and branding. These tags supply the name, description and image for Discord and WhatsApp link previews; the apps determine the final layout and may cache earlier previews.
-- The homepage is rendered to HTML during the build, so its existing header, single H1, section headings, navigation and content are available before JavaScript loads. React hydrates that content to preserve the interactive site.
+- The homepage and pricing page are rendered to HTML during the build, so their headers, single H1s, section headings, navigation and content are available before JavaScript loads. React hydrates that content to preserve the interactive site.
 - Website, webpage and organization JSON-LD identifies NutriMe without claiming a real store, medical service, reviews or social accounts.
-- The build generates `dist/robots.txt`, `dist/sitemap.xml` and separate HTML heads for all seven demo routes. The sitemap includes only the public homepage. Demo screens use `noindex, follow`; robots.txt permits fetching them so crawlers can read that directive.
-- `vercel.json` serves each demo route's own HTML, adds an app-level `X-Robots-Tag`, and normalizes trailing slashes. Keep those rewrites when deploying instead of rewriting every request to the homepage. On another host, serve the matching `dist/app/**/index.html` for each app route and return 404 for unknown URLs.
+- The build generates `dist/robots.txt`, `dist/sitemap.xml` and separate HTML heads for all seven demo routes. The sitemap includes the public homepage and pricing page. Demo screens use `noindex, follow`; robots.txt permits fetching them so crawlers can read that directive.
+- `vercel.json` serves the pricing page and each demo route's own HTML, adds an app-level `X-Robots-Tag`, and normalizes trailing slashes. Keep those rewrites when deploying instead of rewriting every request to the homepage. On another host, serve `dist/pricing/index.html` for `/pricing` and the matching `dist/app/**/index.html` for each app route, and return 404 for unknown URLs.
 - SVG, PNG and Apple touch icons keep the NutriMe display name and branding consistent in tabs and saved links.
 
 The SVG share-card design is in `src/assets/social-card.svg`. To regenerate the PNGs, run `node scripts/generate-social-assets.mjs` with Sharp available, or pass an absolute path to an existing Sharp module as the first argument. Sharp is only an optional artwork tool; normal development and production builds use the included PNGs and do not need it.

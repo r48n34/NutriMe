@@ -15,13 +15,9 @@ export function VideoSection() {
   return (
     <section className="landing-section video-section" id="videos" aria-labelledby="videos-title">
       <div className="center-intro">
-        <div className="eyebrow">A CLOSER LOOK</div>
         <h2 id="videos-title">
           Watch NutriMe <em>in action.</em>
         </h2>
-        <p>
-          Discover NutriMe’s features and find your everyday inspiration. Press play to explore.
-        </p>
       </div>
       <div className="video-grid">
         {videos.map(({ label, title, file }, index) => (
