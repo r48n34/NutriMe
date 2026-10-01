@@ -1,0 +1,1373 @@
+/* Readable type, clear actions and framing for the supplied mascot photograph. */
+:root {
+  --muted: #536b5a;
+  --mint: #e8f3eb;
+  --green: #17624e;
+}
+body {
+  font-size: 15px;
+}
+.button {
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 13px 20px;
+}
+.button-small {
+  font-size: 13px;
+  min-height: 44px;
+}
+.icon-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.text-link {
+  min-height: 36px;
+  font-size: 13px;
+}
+.fine-print {
+  color: #536b5a;
+  font-size: 12px;
+}
+.badge {
+  font-size: 11px;
+}
+.card {
+  border-radius: 18px;
+  background: #fffefa;
+  box-shadow: 0 3px 14px #29493904;
+}
+.mascot {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  border-radius: 18px;
+}
+.mascot > img {
+  position: absolute;
+  max-width: none;
+  user-select: none;
+}
+
+/* Public website */
+.site-header nav {
+  font-size: 14px;
+}
+.site-header .button,
+.landing-cta .button {
+  border-radius: 12px;
+  font-size: 14px;
+}
+.hero-copy > p {
+  font-size: 17px;
+  max-width: 450px;
+  line-height: 1.8;
+}
+.hero-copy .eyebrow {
+  font-size: 11px;
+}
+.hero-actions .button {
+  font-size: 14px;
+}
+.hero-secondary {
+  font-size: 13px;
+  min-height: 44px;
+}
+.hero-reassurance {
+  font-size: 12px;
+}
+.hero-visual {
+  height: 515px;
+  transform: none;
+}
+.hero-disc {
+  width: 366px;
+  height: auto;
+  min-height: 477px;
+  background: #f7efdf;
+  border-radius: 32px;
+  transform: rotate(2deg);
+}
+.hero-mascot {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 326px;
+  height: auto;
+  margin: 19px auto 36px;
+  transform: none;
+  border-radius: 22px;
+}
+.hero-orbit,
+.orbit-caption,
+.hero-spark,
+.hero-leaf,
+.why-circle {
+  display: none;
+}
+.mascot-caption {
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  font-size: 12px;
+}
+.floating-card {
+  border-radius: 14px;
+}
+.floating-card .eyebrow {
+  font-size: 9px;
+}
+.floating-card strong {
+  font-size: 15px;
+}
+.floating-card small {
+  font-size: 11px;
+}
+.breakfast-float {
+  top: 47px;
+  right: -3px;
+}
+.movement-float {
+  bottom: 52px;
+  left: -11px;
+}
+.pillar-strip {
+  border-radius: 16px;
+  background: #e9f2e7;
+}
+.pillar-strip > span,
+.pillar-strip > div {
+  font-size: 13px;
+}
+.section-intro > p,
+.step-card p,
+.center-intro p,
+.why-copy > p {
+  font-size: 15px;
+}
+.pillar-card {
+  border-radius: 18px;
+}
+.pillar-card-content > .eyebrow {
+  font-size: 10px;
+}
+.pillar-card p {
+  font-size: 13px;
+}
+.pillar-card .text-link,
+.why-copy li,
+.why-copy .text-link {
+  font-size: 13px;
+}
+.why-visual {
+  height: 350px;
+}
+.why-visual .mascot {
+  width: 285px;
+  border-radius: 24px;
+}
+.why-label {
+  font-size: 12px;
+}
+.landing-cta p {
+  font-size: 15px;
+}
+.landing-cta small {
+  font-size: 12px;
+}
+.site-footer p,
+.footer-links {
+  font-size: 13px;
+}
+.footer-links > span,
+.footer-bottom {
+  font-size: 11px;
+  color: #536b5a;
+}
+
+/* App navigation and daily overview */
+.sidebar {
+  background: #fffefa;
+}
+.sidebar-caption {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+.sidebar nav > a {
+  font-size: 14px;
+  min-height: 50px;
+  border-radius: 12px;
+}
+.sidebar nav > a.active {
+  background: #e5f1e7;
+  color: #17624e;
+}
+.sidebar-note {
+  background: #f5edde;
+  border-radius: 16px;
+  padding-top: 67px;
+}
+.sidebar-note .mascot {
+  width: 104px;
+  left: calc(50% - 52px);
+  top: -40px;
+}
+.sidebar-note > span {
+  font-size: 19px;
+}
+.sidebar-note > a,
+.back-site {
+  font-size: 12px;
+  min-height: 36px;
+}
+.header-tagline {
+  font-size: 13px;
+}
+.header-date {
+  font-size: 12px;
+}
+.demo-tag {
+  font-size: 11px;
+  border-radius: 7px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+.page-title .eyebrow {
+  font-size: 10px;
+}
+.page-title h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1.05px;
+}
+.page-title p {
+  font-size: 14px;
+}
+.section-heading h2 {
+  font-size: 17px;
+}
+.section-heading .text-link,
+.daily-product-body .text-link {
+  font-size: 12px;
+}
+.welcome-banner {
+  min-height: 252px;
+  padding: 26px 30px;
+  background: #eaf2e2;
+  border-radius: 20px;
+}
+.banner-eyebrow {
+  font-size: 10px;
+}
+.welcome-banner h2 {
+  font-size: 35px;
+}
+.welcome-banner p {
+  font-size: 14px;
+  max-width: 400px;
+}
+.welcome-banner .button {
+  margin-top: 17px;
+  font-size: 13px;
+}
+.banner-art {
+  width: 192px;
+  height: 241px;
+  right: 143px;
+  bottom: 0;
+}
+.banner-art .mascot {
+  width: 174px;
+  left: 9px;
+  top: 7px;
+  transform: none;
+  border-radius: 20px;
+}
+.banner-circle,
+.banner-spark,
+.banner-leaf {
+  display: none;
+}
+.banner-streak {
+  width: 118px;
+  border-radius: 14px;
+}
+.banner-streak span {
+  font-size: 11px;
+}
+.dashboard-top-grid {
+  grid-template-columns: 1.6fr 1fr;
+}
+.health-card,
+.daily-product {
+  padding: 24px;
+}
+.card-description {
+  font-size: 12px;
+  margin: -8px 0 17px;
+}
+.health-content {
+  gap: 20px;
+}
+.health-ring {
+  width: 120px;
+}
+.progress-ring {
+  width: 120px;
+  height: 120px;
+}
+.progress-ring small {
+  font-size: 11px;
+}
+.health-ring > span {
+  font-size: 12px;
+}
+.health-note {
+  font-size: 12px;
+}
+.task-row {
+  min-height: 66px;
+  gap: 12px;
+}
+.task-check {
+  width: 34px;
+  height: 34px;
+}
+.app-shell .eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.3px;
+}
+.task-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  flex: 1;
+  min-width: 0;
+}
+.task-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.task-text strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.task-copy > span {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.task-text .task-view-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  color: #17624e;
+  flex-shrink: 0;
+}
+.task-row.is-done .task-text strong {
+  color: #526e50;
+}
+.daily-product-body {
+  height: auto;
+  min-height: 305px;
+}
+.daily-product-body .product-art {
+  height: 155px;
+}
+.daily-product-body h3 {
+  font-size: 25px;
+}
+.daily-product-body p {
+  font-size: 13px;
+}
+.daily-product-body small {
+  font-size: 12px;
+}
+.meal-card h3 {
+  font-size: 23px;
+}
+.meal-card p {
+  font-size: 13px;
+}
+.coach-nudge h3,
+.progress-nudge h3 {
+  font-size: 24px;
+}
+.coach-nudge p,
+.progress-nudge p {
+  font-size: 13px;
+}
+.coach-nudge .text-link,
+.progress-nudge .text-link {
+  font-size: 12px;
+}
+.app-footer {
+  font-size: 11px;
+}
+
+/* Plan and preferences */
+.week-heading h2 {
+  font-size: 15px;
+}
+.week-days > button {
+  min-height: 88px;
+  border-radius: 14px;
+}
+.week-days > button > span {
+  font-size: 12px;
+}
+.week-days > button > strong {
+  font-size: 25px;
+}
+.tabs > button,
+.plan-toolbar .tabs > button,
+.shop-toolbar .tabs > button {
+  font-size: 13px;
+  min-height: 44px;
+}
+.plan-toolbar > span {
+  font-size: 12px;
+}
+.plan-card {
+  grid-template-columns: 240px 1fr;
+}
+.plan-card-content {
+  padding: 25px 30px;
+}
+.plan-card-content h2 {
+  font-size: 29px;
+}
+.plan-card-content p {
+  font-size: 14px;
+}
+.plan-card-meta {
+  font-size: 13px;
+}
+.plan-card-top > .eyebrow {
+  font-size: 10px;
+}
+.plan-card-content > .text-link {
+  font-size: 13px;
+}
+.plan-note {
+  font-size: 12px;
+}
+.assessment {
+  border-radius: 20px;
+}
+.assessment-progress strong {
+  font-size: 13px;
+}
+.assessment-heading h2 {
+  font-size: 30px;
+}
+.field-label,
+.choice-group legend {
+  font-size: 15px;
+}
+.choice-group > p {
+  font-size: 13px;
+}
+.choice-option {
+  border-radius: 12px;
+  min-height: 70px;
+}
+.choice-option strong {
+  font-size: 14px;
+}
+.choice-option small {
+  font-size: 12px;
+}
+.choice-option.selected {
+  background: #edf5e8;
+}
+.text-input {
+  min-height: 48px;
+  font-size: 15px;
+  border-radius: 12px;
+}
+.assessment-actions > .text-link,
+.assessment-actions > .button {
+  font-size: 14px;
+}
+.assessment-summary p,
+.assessment-aside p {
+  font-size: 13px;
+}
+.aside-note {
+  font-size: 12px;
+}
+.assessment-aside > .mascot {
+  width: 170px;
+  margin-bottom: 20px;
+}
+
+/* Shop, coach, progress and profile */
+.shop-intro {
+  border-radius: 18px;
+}
+.shop-intro h2 {
+  font-size: 27px;
+}
+.shop-intro p {
+  font-size: 14px;
+}
+.shop-toolbar > span {
+  font-size: 12px;
+}
+.product-card {
+  border-radius: 18px;
+}
+.product-badge {
+  font-size: 10px;
+}
+.product-card-content > .eyebrow {
+  font-size: 10px;
+}
+.product-title h2 {
+  font-size: 26px;
+}
+.product-card-content > p {
+  font-size: 13px;
+  min-height: 46px;
+}
+.product-bottom > .button {
+  font-size: 12px;
+  min-height: 44px;
+}
+.product-bottom > strong {
+  font-size: 16px;
+}
+.shopping-bag .section-heading h2 {
+  font-size: 27px;
+}
+.shopping-bag {
+  scroll-margin-top: 24px;
+}
+.shopping-bag .empty-state p {
+  font-size: 13px;
+}
+.cart-item > div:nth-child(2) > strong {
+  font-size: 13px;
+}
+.cart-item > div:nth-child(2) > span,
+.quantity-control > span {
+  font-size: 12px;
+}
+.quantity-control > button {
+  width: 34px;
+  height: 34px;
+}
+.confirmation-summary > div,
+.confirmation-summary strong {
+  font-size: 13px;
+}
+.cart-totals {
+  font-size: 13px;
+}
+.cart-total > strong {
+  font-size: 21px;
+}
+.bag-note,
+.budget-note {
+  font-size: 11px;
+}
+.chat-heading h2 {
+  font-size: 17px;
+}
+.chat-heading > div > span {
+  font-size: 11px;
+}
+.message > div > span {
+  font-size: 10px;
+}
+.message > div > p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+.chat-prompts button {
+  font-size: 12px;
+  min-height: 40px;
+}
+.chat-input {
+  min-height: 54px;
+}
+.chat-input input {
+  font-size: 14px;
+}
+.chat-input:focus-within {
+  outline: 2px solid #17624e;
+  outline-offset: 3px;
+}
+.chat-fine-print {
+  font-size: 11px;
+}
+.expert-content p {
+  font-size: 14px;
+}
+.expert-meta > span {
+  font-size: 12px;
+}
+.expert-badge {
+  font-size: 10px;
+}
+.expert-content > .button {
+  font-size: 13px;
+}
+.expert-content > small {
+  font-size: 11px;
+}
+.coach-small-note > .mascot {
+  width: 90px;
+}
+.coach-small-note p {
+  font-size: 13px;
+}
+.booking-days,
+.booking-times {
+  font-size: 13px;
+}
+.booking-days > label > span {
+  font-size: 12px;
+}
+.booking-times > label {
+  font-size: 13px;
+}
+.booking-times > label {
+  min-height: 44px;
+}
+.metric-card > div > span {
+  font-size: 13px;
+}
+.metric-card strong {
+  font-size: 38px;
+}
+.metric-card p {
+  font-size: 12px;
+}
+.progress-chart .section-heading h2,
+.wins-history .section-heading h2 {
+  font-size: 25px;
+}
+.progress-chart .section-heading p {
+  font-size: 14px;
+}
+.chart-legend,
+.chart-footer {
+  font-size: 12px;
+}
+.chart-footer strong {
+  font-size: 12px;
+}
+.chart-wrap svg text {
+  fill: #4d6253;
+  font-size: 14px;
+}
+.history-date-picker span {
+  font-size: 12px;
+}
+.completed-list strong {
+  font-size: 14px;
+}
+.completed-list small {
+  font-size: 12px;
+}
+.growth-note > .mascot {
+  width: 210px;
+}
+.growth-note > p {
+  font-size: 14px;
+}
+.profile-summary .eyebrow {
+  font-size: 10px;
+}
+.profile-summary p {
+  font-size: 14px;
+}
+.profile-summary > .button {
+  font-size: 13px;
+}
+.preference-card dl > div {
+  font-size: 14px;
+}
+.profile-local-note p {
+  font-size: 12px;
+}
+.booking-item > div > strong,
+.order-item > p {
+  font-size: 13px;
+}
+.booking-item p,
+.order-item > small {
+  font-size: 12px;
+}
+.reset-section p {
+  font-size: 13px;
+}
+.empty-state p {
+  font-size: 14px;
+}
+.modal {
+  border-radius: 20px;
+}
+.modal-heading h2 {
+  font-size: 27px;
+}
+.modal-content {
+  font-size: 14px;
+}
+.modal-content p,
+.modal-content li {
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .welcome-banner h2 {
+    font-size: 31px;
+  }
+  .welcome-banner p {
+    max-width: 315px;
+  }
+  .banner-art {
+    right: 121px;
+    width: 164px;
+  }
+  .banner-art .mascot {
+    width: 158px;
+    top: 24px;
+    left: 0;
+  }
+  .banner-streak {
+    width: 103px;
+    padding: 16px 10px;
+  }
+  .health-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .health-ring {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-align: left;
+  }
+  .health-ring > span {
+    margin-top: 0;
+  }
+  .health-ring .progress-ring {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+  }
+  .plan-card {
+    grid-template-columns: 200px 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .dashboard-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .daily-product-body {
+    min-height: 160px;
+  }
+  .daily-product-body .product-art {
+    height: 155px;
+  }
+  .welcome-banner p {
+    max-width: 290px;
+  }
+  .banner-art {
+    right: 10px;
+  }
+  .banner-streak {
+    display: none;
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .hero-disc {
+    width: 290px;
+    min-height: 408px;
+  }
+  .hero-mascot {
+    width: 264px;
+    margin-top: 14px;
+  }
+  .hero-visual {
+    height: 450px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .floating-card {
+    padding: 10px;
+    gap: 8px;
+  }
+  .floating-card strong {
+    font-size: 12px;
+  }
+  .floating-card small {
+    font-size: 10px;
+  }
+  .movement-float {
+    left: 0;
+  }
+  .breakfast-float {
+    right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .site-header .button {
+    min-height: 44px;
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+  .hero-copy h1 {
+    font-size: 46px;
+    letter-spacing: -2.2px;
+  }
+  .hero-copy > p {
+    font-size: 15px;
+  }
+  .hero-copy .eyebrow {
+    font-size: 10px;
+  }
+  .hero-actions {
+    gap: 10px 18px;
+  }
+  .hero-actions .button {
+    font-size: 13px;
+    padding: 13px 17px;
+  }
+  .hero-secondary {
+    font-size: 12px;
+  }
+  .hero-reassurance {
+    font-size: 11px;
+    gap: 15px;
+  }
+  .hero-visual {
+    height: 439px;
+    transform: none;
+  }
+  .hero-disc {
+    width: 290px;
+    height: auto;
+    min-height: 401px;
+  }
+  .hero-mascot {
+    width: 264px;
+    top: auto;
+    left: auto;
+    margin: 13px auto 42px;
+  }
+  .mascot-caption {
+    font-size: 11px;
+    left: 0;
+    bottom: 17px;
+  }
+  .floating-card strong {
+    font-size: 12px;
+  }
+  .floating-card small {
+    font-size: 9px;
+  }
+  .floating-card .eyebrow {
+    font-size: 8px;
+  }
+  .breakfast-float {
+    top: 36px;
+    right: 0;
+  }
+  .movement-float {
+    bottom: 36px;
+    left: 0;
+  }
+  .pillar-strip > div {
+    font-size: 12px;
+  }
+  .section-intro > p,
+  .step-card p,
+  .center-intro p,
+  .why-copy > p {
+    font-size: 14px;
+  }
+  .pillar-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pillar-art,
+  .rest-art {
+    height: 185px;
+  }
+  .pillar-card-content {
+    padding: 23px;
+  }
+  .pillar-card-content > .eyebrow {
+    font-size: 10px;
+  }
+  .pillar-card h3 {
+    font-size: 28px;
+  }
+  .pillar-card p {
+    font-size: 14px;
+    min-height: 0;
+  }
+  .pillar-card .text-link {
+    font-size: 13px;
+  }
+  .why-visual .mascot {
+    width: 265px;
+  }
+  .why-label {
+    font-size: 11px;
+  }
+  .why-copy li,
+  .why-copy .text-link {
+    font-size: 12px;
+  }
+  .landing-cta .eyebrow {
+    font-size: 10px;
+  }
+  .landing-cta p {
+    font-size: 14px;
+  }
+  .landing-cta .button {
+    font-size: 13px;
+  }
+  .site-footer p,
+  .footer-links {
+    font-size: 12px;
+  }
+  .footer-links > span,
+  .footer-bottom {
+    font-size: 10px;
+  }
+  .app-content {
+    padding: 25px 20px 30px;
+  }
+  .page-title h1 {
+    font-size: 28px;
+  }
+  .page-title p {
+    font-size: 13px;
+  }
+  .page-title-action .button {
+    font-size: 13px;
+    min-height: 44px;
+  }
+  .demo-tag {
+    font-size: 10px;
+  }
+  .welcome-banner {
+    min-height: 228px;
+    padding: 22px 20px;
+  }
+  .welcome-banner > div:first-child {
+    width: 64%;
+  }
+  .welcome-banner h2 {
+    font-size: 27px;
+  }
+  .welcome-banner p {
+    font-size: 12px;
+    max-width: 185px;
+    line-height: 1.7;
+  }
+  .banner-eyebrow {
+    font-size: 9px;
+  }
+  .welcome-banner .button {
+    font-size: 11px;
+    padding: 10px 12px;
+    min-height: 44px;
+    gap: 6px;
+  }
+  .banner-art {
+    width: 117px;
+    height: 154px;
+    right: -1px;
+    bottom: 22px;
+  }
+  .banner-art .mascot {
+    width: 117px;
+    left: 0;
+    top: 0;
+    border-radius: 14px;
+  }
+  .health-card,
+  .daily-product {
+    padding: 21px;
+  }
+  .section-heading {
+    gap: 10px;
+  }
+  .section-heading h2 {
+    font-size: 16px;
+  }
+  .section-heading .text-link {
+    font-size: 11px;
+  }
+  .card-description {
+    font-size: 12px;
+  }
+  .health-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  .health-ring {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #e4e9de;
+    padding-bottom: 15px;
+    text-align: left;
+  }
+  .health-ring > span {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .health-ring .progress-ring {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+  }
+  .progress-ring small {
+    font-size: 10px;
+  }
+  .task-row {
+    min-height: 75px;
+    gap: 12px;
+    padding: 12px 0;
+  }
+  .task-check {
+    width: 44px;
+    height: 44px;
+  }
+  .task-text {
+    gap: 7px;
+  }
+  .task-text strong {
+    font-size: 14px;
+  }
+  .task-copy > span {
+    font-size: 12px;
+  }
+  .task-text .task-view-label {
+    font-size: 11px;
+  }
+  .health-note {
+    font-size: 11px;
+    line-height: 1.7;
+    align-items: flex-start;
+  }
+  .daily-product-body {
+    min-height: 172px;
+    height: auto;
+  }
+  .daily-product-body .product-art {
+    width: 110px;
+    height: 152px;
+  }
+  .daily-product-body h3 {
+    font-size: 25px;
+  }
+  .daily-product-body p {
+    font-size: 12px;
+  }
+  .daily-product-body small,
+  .daily-product-body .text-link {
+    font-size: 11px;
+  }
+  .meal-card {
+    display: block;
+  }
+  .meal-card-art {
+    height: 172px;
+    width: 100%;
+  }
+  .meal-card-body {
+    padding: 21px;
+  }
+  .meal-card .meal-time {
+    font-size: 11px;
+  }
+  .meal-card h3 {
+    font-size: 26px;
+  }
+  .meal-card p {
+    font-size: 14px;
+  }
+  .coach-nudge h3,
+  .progress-nudge h3 {
+    font-size: 23px;
+  }
+  .coach-nudge p,
+  .progress-nudge p {
+    font-size: 12px;
+  }
+  .app-footer {
+    font-size: 10px;
+  }
+  .mobile-nav {
+    height: 82px;
+    padding-top: 9px;
+  }
+  .mobile-nav > a {
+    font-size: 11px;
+    min-height: 57px;
+  }
+  .toast {
+    bottom: 99px;
+    font-size: 13px;
+  }
+  .week-heading h2 {
+    font-size: 14px;
+  }
+  .week-days > button {
+    min-height: 78px;
+  }
+  .week-days > button > span {
+    font-size: 10px;
+  }
+  .week-days > button > strong {
+    font-size: 22px;
+  }
+  .tabs > button,
+  .plan-toolbar .tabs > button,
+  .shop-toolbar .tabs > button {
+    font-size: 11px;
+    min-height: 44px;
+  }
+  .plan-toolbar .tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+  .plan-toolbar .tabs > button {
+    flex-direction: column;
+    padding: 9px 6px;
+    gap: 5px;
+    min-height: 54px;
+  }
+  .plan-toolbar > span {
+    font-size: 11px;
+  }
+  .plan-card {
+    grid-template-columns: 1fr;
+  }
+  .plan-card-art {
+    height: 175px;
+  }
+  .plan-card-content {
+    padding: 24px 21px;
+  }
+  .plan-card-content h2 {
+    font-size: 29px;
+  }
+  .plan-card-content p {
+    font-size: 14px;
+  }
+  .plan-card-meta {
+    font-size: 12px;
+  }
+  .assessment-progress strong {
+    font-size: 11px;
+  }
+  .assessment-heading h2 {
+    font-size: 28px;
+  }
+  .field-label,
+  .choice-group legend {
+    font-size: 14px;
+  }
+  .choice-group > p {
+    font-size: 12px;
+  }
+  .choice-option strong {
+    font-size: 14px;
+  }
+  .choice-option small {
+    font-size: 12px;
+  }
+  .choice-group:has(input[name="minutes"]) .choice-option strong,
+  .choice-group:has(input[name="budget"]) .choice-option strong {
+    font-size: 12px;
+    margin-right: 0;
+  }
+  .choice-group:has(input[name="minutes"]) .choice-option > span,
+  .choice-group:has(input[name="budget"]) .choice-option > span {
+    padding-right: 0;
+  }
+  .choice-group:has(input[name="minutes"]) .radio-dot,
+  .choice-group:has(input[name="budget"]) .radio-dot {
+    display: none;
+  }
+  .assessment-actions > .text-link,
+  .assessment-actions > .button {
+    font-size: 13px;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-card-art {
+    height: 190px;
+  }
+  .product-card-art > .product-art {
+    height: 175px;
+  }
+  .product-card-content {
+    padding: 23px;
+  }
+  .product-title h2 {
+    font-size: 29px;
+  }
+  .product-card-content > p {
+    font-size: 14px;
+    min-height: 0;
+  }
+  .product-bottom > .button {
+    font-size: 13px;
+  }
+  .shop-intro h2 {
+    font-size: 27px;
+  }
+  .shop-intro p {
+    font-size: 13px;
+  }
+  .shop-toolbar > span {
+    font-size: 11px;
+  }
+  .expert-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .expert-art {
+    min-height: 190px;
+    height: 190px;
+    width: 100%;
+  }
+  .expert-content {
+    padding: 26px;
+  }
+  .expert-content h2 {
+    font-size: 29px;
+  }
+  .expert-content p {
+    font-size: 14px;
+  }
+  .expert-meta > span {
+    font-size: 12px;
+  }
+  .expert-content > .button {
+    font-size: 13px;
+  }
+  .coach-small-note > .mascot {
+    width: 94px;
+  }
+  .coach-small-note p {
+    font-size: 12px;
+  }
+  .chat-prompts button {
+    font-size: 12px;
+  }
+  .message > div > p {
+    font-size: 14px;
+  }
+  .metric-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .metric-card:first-child {
+    grid-column: 1 / -1;
+  }
+  .metric-card > div > span {
+    font-size: 12px;
+  }
+  .metric-card strong {
+    font-size: 34px;
+  }
+  .metric-card p {
+    font-size: 11px;
+  }
+  .progress-chart .section-heading h2,
+  .wins-history .section-heading h2 {
+    font-size: 23px;
+  }
+  .progress-chart .section-heading p {
+    font-size: 12px;
+  }
+  .chart-legend,
+  .chart-footer {
+    font-size: 11px;
+  }
+  .chart-footer strong {
+    font-size: 11px;
+  }
+  .chart-wrap {
+    height: 125px;
+  }
+  .chart-wrap svg text {
+    font-size: 27px;
+  }
+  .growth-note > .mascot {
+    width: 111px;
+  }
+  .growth-note > p {
+    font-size: 12px;
+  }
+  .preference-card dl > div {
+    font-size: 13px;
+  }
+  .profile-summary p {
+    font-size: 13px;
+  }
+  .reset-section p {
+    font-size: 13px;
+  }
+  .modal-heading h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 370px) {
+  .hero-copy h1 {
+    font-size: 42px;
+  }
+  .hero-reassurance {
+    flex-wrap: wrap;
+    font-size: 11px;
+  }
+  .hero-disc {
+    width: 264px;
+    min-height: 375px;
+  }
+  .hero-mascot {
+    width: 242px;
+  }
+  .floating-card strong {
+    font-size: 11px;
+  }
+  .floating-card small {
+    font-size: 9px;
+  }
+  .welcome-banner h2 {
+    font-size: 24px;
+  }
+  .banner-art,
+  .banner-art .mascot {
+    width: 100px;
+  }
+  .section-heading h2 {
+    font-size: 15px;
+  }
+  .task-text .task-view-label {
+    font-size: 10px;
+  }
+}

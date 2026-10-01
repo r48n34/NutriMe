@@ -27,9 +27,14 @@ export function Shop() {
   return (
     <>
       <PageTitle
-        title="A little extra goodness."
-        description="Thoughtful extras for your routine. Only if they fit you."
-      />
+        title="Products for your routine."
+        description="Explore optional products, understand why they fit, and try demo checkout."
+      >
+        <a className="button button-outline button-small" href="#shopping-bag">
+          <ShoppingBag size={17} />
+          View bag · {state.cart.reduce((count, item) => count + item.quantity, 0)}
+        </a>
+      </PageTitle>
       <div className="shop-intro">
         <span className="feature-icon">
           <Leaf size={24} />
@@ -55,7 +60,7 @@ export function Shop() {
                 aria-pressed={filter === "all"}
                 onClick={() => setFilter("all")}
               >
-                All the good stuff
+                All products
               </button>
               <button
                 className={filter === "recommended" ? "active" : ""}
@@ -115,11 +120,11 @@ export function Shop() {
             )}
           </div>
         </div>
-        <aside className="card shopping-bag">
+        <aside id="shopping-bag" className="card shopping-bag">
           <div className="section-heading">
             <h2>
               <ShoppingBag size={19} />
-              Your little bag
+              Your shopping bag
             </h2>
             <span className="bag-count">
               {state.cart.reduce((count, item) => count + item.quantity, 0)}

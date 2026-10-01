@@ -18,8 +18,8 @@ export function Progress() {
   return (
     <>
       <PageTitle
-        title="Look at you, showing up."
-        description="Progress isn’t always loud. Sometimes it’s five quiet minutes for yourself."
+        title="Your progress."
+        description="See your completed tasks, consistency streak and daily activity history."
       />
       <div className="metric-grid">
         <div className="card metric-card">
@@ -27,7 +27,7 @@ export function Progress() {
             <Check size={22} />
           </span>
           <div>
-            <span>This week’s little wins</span>
+            <span>Tasks completed this week</span>
             <strong>
               {total}
               <small> / 35</small>
@@ -65,7 +65,7 @@ export function Progress() {
       <section className="card progress-chart">
         <div className="section-heading">
           <div>
-            <h2>Your week, in little wins.</h2>
+            <h2>Daily task completion</h2>
             <p>Some days are fuller than others. They all belong.</p>
           </div>
           <span className="chart-legend">

@@ -379,7 +379,7 @@
 }
 .assessment-aside > .mascot {
   width: 195px;
-  height: 230px;
+  height: auto;
   margin: -7px auto 16px;
 }
 .assessment-aside > .eyebrow {
@@ -1020,7 +1020,7 @@
 }
 .coach-small-note > .mascot {
   width: 76px;
-  height: 85px;
+  height: auto;
   transform: rotate(-5deg);
 }
 .coach-small-note p {
@@ -1274,7 +1274,7 @@
 }
 .growth-note > .mascot {
   width: 180px;
-  height: 194px;
+  height: auto;
   display: block;
   margin: -4px auto 10px;
 }
@@ -1577,7 +1577,7 @@
   }
   .assessment-aside > .mascot {
     width: 175px;
-    height: 210px;
+    height: auto;
   }
   .coach-layout {
     gap: 20px;
@@ -1600,7 +1600,7 @@
   }
   .coach-small-note > .mascot {
     width: 65px;
-    height: 74px;
+    height: auto;
   }
   .metric-grid {
     gap: 17px;
@@ -1739,7 +1739,7 @@
   }
   .coach-small-note > .mascot {
     width: 116px;
-    height: 133px;
+    height: auto;
   }
   .coach-small-note p {
     margin-top: 10px;
@@ -1754,7 +1754,7 @@
     gap: 20px;
   }
   .coach-small-note > .mascot {
-    height: 85px;
+    height: auto;
     width: 80px;
   }
   .coach-small-note p {
@@ -1788,7 +1788,7 @@
   .growth-note > .mascot {
     grid-row: 1/4;
     margin: 0;
-    height: 170px;
+    height: auto;
     width: 160px;
   }
   .growth-note > .eyebrow {
@@ -2401,7 +2401,7 @@
   }
   .coach-small-note > .mascot {
     width: 73px;
-    height: 84px;
+    height: auto;
   }
   .coach-small-note p {
     font-size: 9px;
@@ -2538,7 +2538,7 @@
   }
   .growth-note > .mascot {
     width: 120px;
-    height: 145px;
+    height: auto;
     grid-row: 1/4;
   }
   .growth-note h2 {

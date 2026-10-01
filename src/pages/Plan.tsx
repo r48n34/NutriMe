@@ -25,8 +25,8 @@ export function Plan() {
   return (
     <>
       <PageTitle
-        title="Find your everyday flow."
-        description="A little structure. Plenty of room to make it yours."
+        title="Your daily plan."
+        description="Choose a day, explore your routine and check off completed tasks."
       >
         <Link className="button button-outline button-small" to="/app/personalize">
           <Sparkles size={15} />
@@ -92,10 +92,10 @@ export function Plan() {
       <div className="plan-toolbar">
         <div className="tabs" aria-label="Filter plan sections">
           {[
-            { id: "all", label: "Your whole day", icon: Sparkles },
-            { id: "meals", label: "Nourish", icon: Utensils },
-            { id: "movement", label: "Move", icon: Dumbbell },
-            { id: "recovery", label: "Recharge", icon: Moon },
+            { id: "all", label: "All tasks", icon: Sparkles },
+            { id: "meals", label: "Meals", icon: Utensils },
+            { id: "movement", label: "Movement", icon: Dumbbell },
+            { id: "recovery", label: "Recovery", icon: Moon },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -109,7 +109,7 @@ export function Plan() {
           ))}
         </div>
         <span>
-          {completion(plan)} of 5 little wins
+          {completion(plan)} of 5 tasks completed
           {selected !== today ? " · " + formatDate(selected) : " today"}
         </span>
       </div>

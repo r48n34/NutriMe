@@ -21,7 +21,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
   );
 }
 export function PageTitle({
-  eyebrow = "A LITTLE BETTER, EVERY DAY",
+  eyebrow = "YOUR NUTRIME PLAN",
   title,
   description,
   children,
@@ -82,7 +82,7 @@ export function ProgressRing({ plan, small = false }: { plan: DayPlan; small?: b
           {done}
           <span> / {plan.tasks.length}</span>
         </strong>
-        <small>little wins</small>
+        <small>tasks done</small>
       </div>
     </div>
   );
@@ -100,6 +100,7 @@ export function TaskCheck({
     <button
       className={`task-check ${complete ? "complete" : ""}`}
       aria-label={`Mark ${label} ${complete ? "incomplete" : "complete"}`}
+      title={complete ? "Mark as unfinished" : "Mark as done"}
       aria-pressed={complete}
       onClick={onClick}
     >
@@ -121,11 +122,19 @@ export function TaskList({
       {plan.tasks.map((task) => (
         <div className={`task-row ${task.complete ? "is-done" : ""}`} key={task.id}>
           <TaskCheck complete={task.complete} label={task.id} onClick={() => onToggle(task.id)} />
-          <button className="task-text" onClick={() => onOpen(task.id)}>
-            <strong>{task.title}</strong>
-            <span>{task.subtitle}</span>
+          <button
+            className="task-text"
+            aria-label={`View ${task.title}`}
+            onClick={() => onOpen(task.id)}
+          >
+            <span className="task-copy">
+              <strong>{task.title}</strong>
+              <span>{task.subtitle}</span>
+            </span>
+            <span className="task-view-label" aria-hidden="true">
+              View <ArrowUpRight size={15} />
+            </span>
           </button>
-          <ArrowUpRight size={15} className="muted" />
         </div>
       ))}
     </div>

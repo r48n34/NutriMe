@@ -46,8 +46,8 @@ export function Coach() {
   return (
     <>
       <PageTitle
-        title="A little support, a big difference."
-        description="A gentle nudge. A fresh perspective. Someone in your corner."
+        title="Your wellness coach."
+        description="Adjust your daily plan with a guided conversation, or try a sample appointment."
       />
       <div className="coach-layout">
         <section className="card chat-card">

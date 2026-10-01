@@ -11,47 +11,44 @@ import { Shop } from "./pages/Shop";
 import { Coach } from "./pages/Coach";
 import { Progress } from "./pages/Progress";
 import { Profile } from "./pages/Profile";
+import { updatePageSeo } from "./utils/seo-dom";
 
 function RouteEffects() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-    const names: Record<string, string> = {
-      "/": "A little better, every day",
-      "/app": "My day",
-      "/app/plan": "My plan",
-      "/app/personalize": "Make it yours",
-      "/app/shop": "The good stuff",
-      "/app/coach": "My coach",
-      "/app/progress": "My progress",
-      "/app/profile": "About me",
-    };
-    document.title = `NutriMe — ${names[pathname] ?? "Your everyday space"}`;
+    updatePageSeo(pathname);
   }, [pathname]);
   return null;
+}
+
+export function AppContent() {
+  return (
+    <DemoProvider>
+      <ToastProvider>
+        <RouteEffects />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/app" element={<AppShell />}>
+            <Route index element={<Dashboard />} />
+            <Route path="personalize" element={<Personalize />} />
+            <Route path="plan" element={<Plan />} />
+            <Route path="shop" element={<Shop />} />
+            <Route path="coach" element={<Coach />} />
+            <Route path="progress" element={<Progress />} />
+            <Route path="profile" element={<Profile />} />
+          </Route>
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </ToastProvider>
+    </DemoProvider>
+  );
 }
 
 export default function App() {
   return (
     <BrowserRouter>
-      <DemoProvider>
-        <ToastProvider>
-          <RouteEffects />
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/app" element={<AppShell />}>
-              <Route index element={<Dashboard />} />
-              <Route path="personalize" element={<Personalize />} />
-              <Route path="plan" element={<Plan />} />
-              <Route path="shop" element={<Shop />} />
-              <Route path="coach" element={<Coach />} />
-              <Route path="progress" element={<Progress />} />
-              <Route path="profile" element={<Profile />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </ToastProvider>
-      </DemoProvider>
+      <AppContent />
     </BrowserRouter>
   );
 }

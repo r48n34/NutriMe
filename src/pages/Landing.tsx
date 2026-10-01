@@ -35,7 +35,7 @@ export function Landing() {
           <a href="#why">The NutriMe way</a>
         </nav>
         <Link className="button button-small button-outline" to="/app">
-          Explore the app <ArrowUpRight size={17} />
+          Open app demo <ArrowUpRight size={17} />
         </Link>
       </header>
       <main id="main">
@@ -52,15 +52,15 @@ export function Landing() {
               <br />A little <em>simpler.</em>
             </h1>
             <p>
-              Good food, feel-good movement, and a moment to recharge. One personal plan that brings
-              it all together—on your terms.
+              Your meals, workouts and recovery in one personal plan. Build healthy habits that fit
+              your time, your preferences and your everyday life.
             </p>
             <div className="hero-actions">
               <Link className="button" to="/app">
-                Find your everyday flow <ArrowUpRight size={19} />
+                Try the free demo <ArrowUpRight size={19} />
               </Link>
               <a className="hero-secondary" href="#how">
-                Get to know NutriMe <ArrowRight size={16} />
+                See how it works <ArrowRight size={16} />
               </a>
             </div>
             <div className="hero-reassurance">

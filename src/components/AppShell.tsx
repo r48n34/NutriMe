@@ -16,12 +16,12 @@ import { useDemo } from "../state/DemoContext";
 import { formatDate } from "../utils/dates";
 
 const navigation = [
-  { to: "/app", label: "My day", icon: House },
-  { to: "/app/plan", label: "My plan", icon: CalendarDays },
-  { to: "/app/coach", label: "My coach", icon: MessageCircleHeart },
-  { to: "/app/shop", label: "The good stuff", icon: ShoppingBag },
-  { to: "/app/progress", label: "My progress", icon: ChartNoAxesCombined },
-  { to: "/app/profile", label: "About me", icon: UserRound },
+  { to: "/app", label: "Overview", mobileLabel: "Home", icon: House },
+  { to: "/app/plan", label: "Daily plan", mobileLabel: "Plan", icon: CalendarDays },
+  { to: "/app/coach", label: "Coach", mobileLabel: "Coach", icon: MessageCircleHeart },
+  { to: "/app/shop", label: "Shop", mobileLabel: "Shop", icon: ShoppingBag },
+  { to: "/app/progress", label: "Progress", mobileLabel: "Progress", icon: ChartNoAxesCombined },
+  { to: "/app/profile", label: "Profile", mobileLabel: "Profile", icon: UserRound },
 ];
 export function AppShell() {
   const { state, today, storageAvailable } = useDemo();
@@ -32,7 +32,7 @@ export function AppShell() {
       </a>
       <aside className="sidebar">
         <Logo />
-        <div className="sidebar-caption">YOUR EVERYDAY SPACE</div>
+        <div className="sidebar-caption">YOUR WELLNESS PLAN</div>
         <nav aria-label="App navigation">
           {navigation.map(({ to, label, icon: Icon }) => (
             <NavLink key={to} to={to} end={to === "/app"}>
@@ -45,12 +45,12 @@ export function AppShell() {
         <div className="sidebar-note">
           <Mascot pose="rest" />
           <span>
-            Little steps.
+            A plan that fits
             <br />
-            <strong>Lovely possibilities.</strong>
+            <strong>your everyday.</strong>
           </span>
           <Link to="/app/personalize">
-            Make it yours <Sparkles size={14} />
+            Edit preferences <Sparkles size={14} />
           </Link>
         </div>
         <Link to="/" className="back-site">
@@ -64,7 +64,7 @@ export function AppShell() {
           <div className="mobile-logo">
             <Logo />
           </div>
-          <span className="header-tagline">Your wellness, connected.</span>
+          <span className="header-tagline">A healthier day starts with a simple plan.</span>
           <div className="header-right">
             <span className="demo-tag">
               <span />
@@ -95,16 +95,10 @@ export function AppShell() {
       <nav className="mobile-nav" aria-label="Mobile app navigation">
         {navigation
           .filter((item) => item.to !== "/app/progress")
-          .map(({ to, label, icon: Icon }) => (
+          .map(({ to, mobileLabel, icon: Icon }) => (
             <NavLink key={to} to={to} end={to === "/app"}>
               <Icon size={21} strokeWidth={1.7} />
-              <span>
-                {label === "The good stuff"
-                  ? "Shop"
-                  : label === "About me"
-                    ? "Me"
-                    : label.replace("My ", "")}
-              </span>
+              <span>{mobileLabel}</span>
             </NavLink>
           ))}
       </nav>

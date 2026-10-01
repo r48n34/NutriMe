@@ -25,8 +25,8 @@ export function Personalize() {
   return (
     <>
       <PageTitle
-        title="A plan that feels like you."
-        description="A few little details. A much more personal everyday."
+        title="Personalize your plan."
+        description="Three short steps to match your meals and movement to your life."
       />
       <div className="assessment-layout">
         <section className="card assessment">
@@ -200,7 +200,7 @@ export function Personalize() {
               {step > 0 ? (
                 <button className="text-link" type="button" onClick={() => setStep(step - 1)}>
                   <ArrowLeft size={16} />
-                  Back a step
+                  Back
                 </button>
               ) : (
                 <Link className="text-link" to="/app">
@@ -208,7 +208,7 @@ export function Personalize() {
                 </Link>
               )}
               <button className="button" type="submit" disabled={!profile.name.trim()}>
-                {step === 2 ? "Make my plan" : "Next little step"}
+                {step === 2 ? "Save preferences" : "Continue"}
                 <ArrowRight size={17} />
               </button>
             </div>

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/app", "destination": "/app/index.html" },
+    {
+      "source": "/app/:page(personalize|plan|shop|coach|progress|profile)",
+      "destination": "/app/:page/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/app/:path*",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }]
+    }
+  ]
+}

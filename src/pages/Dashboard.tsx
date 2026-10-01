@@ -31,26 +31,26 @@ export function Dashboard() {
       <PageTitle
         eyebrow={`${formatDate(today, { weekday: "long", day: "numeric", month: "long" }).toUpperCase()} · YOUR FRESH START`}
         title={`Good morning, ${state.profile.name}.`}
-        description="Let’s make room for a little good today."
+        description="Your meals, movement and recovery, all in one place."
       >
         <Link className="button button-outline button-small" to="/app/personalize">
           <Sparkles size={15} />
-          Make it more you
+          Personalize my plan
         </Link>
       </PageTitle>
       <section className="welcome-banner">
         <div>
           <span className="banner-eyebrow">
-            <Sun size={17} /> HERE’S TO YOUR EVERYDAY
+            <Sun size={17} /> YOUR PLAN IS READY
           </span>
           <h2>
-            Small steps.
+            Your day,
             <br />
-            <em>Good things ahead.</em>
+            <em>made easier.</em>
           </h2>
-          <p>Your plan is ready. You just bring yourself.</p>
-          <Link className="text-link" to="/app/plan">
-            Find your flow
+          <p>Choose one task, go at your pace, and build on it.</p>
+          <Link className="button button-small" to="/app/plan">
+            Open today’s plan
             <ArrowRight size={17} />
           </Link>
         </div>
@@ -63,16 +63,19 @@ export function Dashboard() {
         <div className="banner-streak">
           <Flame size={19} />
           <strong>{consistentDays(state, today)} days</strong>
-          <span>of showing up</span>
+          <span>consistency streak</span>
         </div>
       </section>
       <div className="dashboard-top-grid">
         <section className="card health-card">
-          <SectionHeading title="Today’s health card" to="/app/plan" link="Your full plan" />
+          <SectionHeading title="Today’s health card" to="/app/plan" link="View plan" />
+          <p className="card-description">
+            Check a circle to complete a task. Select a task to see the details.
+          </p>
           <div className="health-content">
             <div className="health-ring">
               <ProgressRing plan={plan} />
-              <span>Every little win counts.</span>
+              <span>Your daily progress</span>
             </div>
             <TaskList
               plan={plan}
@@ -81,11 +84,11 @@ export function Dashboard() {
             />
           </div>
           <div className="health-note">
-            <Leaf size={14} /> A little nourishment, a little movement, a little calm.
+            <Leaf size={14} /> Three meals, one workout and a moment to wind down.
           </div>
         </section>
         <section className="card daily-product">
-          <SectionHeading title="A little extra support" to="/app/shop" link="Explore" />
+          <SectionHeading title="Optional product pick" to="/app/shop" link="Shop" />
           <div className="daily-product-body">
             <ProductArt product={product} />
             <div>
@@ -93,7 +96,7 @@ export function Dashboard() {
               <h3>{product.name}</h3>
               <p>{product.reason}</p>
               <Link className="text-link" to="/app/shop">
-                Take a closer look
+                View product
                 <ArrowUpRight size={16} />
               </Link>
               <small>{money(product.price)} · Optional extra</small>
@@ -102,7 +105,7 @@ export function Dashboard() {
         </section>
       </div>
       <section className="meals-section">
-        <SectionHeading title="A good day, on a plate" to="/app/plan" link="All meal ideas" />
+        <SectionHeading title="Today’s meal ideas" to="/app/plan" link="View meals" />
         <div className="meal-grid">
           {plan.tasks
             .filter((task) => ["breakfast", "lunch", "dinner"].includes(task.id))
@@ -139,15 +142,15 @@ export function Dashboard() {
           </span>
           <div>
             <div className="eyebrow">IN YOUR CORNER</div>
-            <h3>A little guidance goes a long way.</h3>
-            <p>Need a lighter plan or a fresh idea? Let’s talk.</p>
+            <h3>Need help with your plan?</h3>
+            <p>Try a shorter workout, swap a meal or book a demo session.</p>
           </div>
           <ArrowUpRight size={22} />
         </Link>
         <Link className="progress-nudge" to="/app/progress">
           <div>
             <div className="eyebrow">LOOK HOW FAR YOU’VE COME</div>
-            <h3>Your little wins add up.</h3>
+            <h3>See how your week is going.</h3>
             <span className="text-link">
               See your progress
               <ArrowUpRight size={15} />

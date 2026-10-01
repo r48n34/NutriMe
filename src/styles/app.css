@@ -68,7 +68,7 @@
 .sidebar-note .mascot {
   position: absolute;
   width: 92px;
-  height: 107px;
+  height: auto;
   left: calc(50% - 46px);
   top: -52px;
 }
@@ -268,7 +268,7 @@
 }
 .banner-art .mascot {
   width: 195px;
-  height: 225px;
+  height: auto;
   position: absolute;
   left: 37px;
   top: 2px;
@@ -696,7 +696,7 @@
   }
   .banner-art .mascot {
     width: 230px;
-    height: 260px;
+    height: auto;
     top: 0;
   }
   .banner-circle {
@@ -890,7 +890,7 @@
   }
   .banner-art .mascot {
     width: 170px;
-    height: 200px;
+    height: auto;
     left: 0;
     top: 35px;
   }
@@ -1106,7 +1106,7 @@
   }
   .banner-art .mascot {
     width: 162px;
-    height: 188px;
+    height: auto;
     left: 0;
     top: 26px;
     transform: rotate(-3deg);

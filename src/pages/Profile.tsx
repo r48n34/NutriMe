@@ -33,8 +33,8 @@ export function Profile() {
   return (
     <>
       <PageTitle
-        title="Your life. Your little details."
-        description="A plan is only useful when it feels like yours."
+        title="Your profile."
+        description="Manage your preferences and review your demo orders and appointments."
       />
       <section className="card profile-summary">
         <span className="profile-avatar">{state.profile.name.slice(0, 1).toUpperCase()}</span>

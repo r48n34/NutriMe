@@ -1,7 +1,6 @@
 @import "./styles/landing.css";
 @import "./styles/app.css";
 @import "./styles/pages.css";
-@import "./styles/readability.css";
 
 :root {
   font-family: "DM Sans", sans-serif;
