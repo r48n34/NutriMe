@@ -341,6 +341,54 @@
   font-size: 12px;
   line-height: 1.85;
 }
+.video-section {
+  padding-top: 0;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.video-card {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e1e5d7;
+  border-radius: 18px;
+  background: #fffef9;
+}
+.video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #173d2f;
+}
+.video-card video:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: -3px;
+}
+.video-card figcaption {
+  padding: 22px 24px;
+}
+.video-card .eyebrow {
+  font-size: 10px;
+}
+.video-card h3 {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+@media (max-width: 700px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .video-card figcaption {
+    padding: 20px;
+  }
+}
 .daily-section {
   padding-top: 46px;
   padding-bottom: 88px;

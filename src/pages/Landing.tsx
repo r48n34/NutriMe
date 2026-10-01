@@ -16,6 +16,7 @@ import { Link } from "react-router";
 import { Mascot } from "../components/Mascot";
 import { MealArt, MovementArt, ProductArt } from "../components/Illustrations";
 import { Logo } from "../components/UI";
+import { VideoSection } from "../components/VideoSection";
 import { MEALS, PRODUCTS } from "../data/fixtures";
 import { todayInHongKong } from "../utils/dates";
 
@@ -31,6 +32,7 @@ export function Landing() {
         <Logo />
         <nav aria-label="Website navigation">
           <a href="#how">How it works</a>
+          <a href="#videos">Watch the videos</a>
           <a href="#daily">Your daily plan</a>
           <a href="#why">The NutriMe way</a>
         </nav>
@@ -181,6 +183,7 @@ export function Landing() {
             ))}
           </div>
         </section>
+        <VideoSection />
         <section className="landing-section daily-section" id="daily">
           <div className="center-intro">
             <div className="eyebrow">ONE PLAN. ALL OF YOU.</div>
@@ -322,6 +325,7 @@ export function Landing() {
         </div>
         <div className="footer-links">
           <a href="#how">How it works</a>
+          <a href="#videos">Watch the videos</a>
           <Link to="/app">
             Explore the demo
             <ChevronRight size={13} />
@@ -329,8 +333,7 @@ export function Landing() {
           <span>Made with everyday Hong Kong in mind.</span>
         </div>
         <div className="footer-bottom">
-          <span>© {copyrightYear} NutriMe · Concept demo</span>
-          <span>Illustrative wellness content and products.</span>
+          <span>© {copyrightYear} NutriMe · EC5001 2026/27 Serious Business</span>
         </div>
       </footer>
     </div>
