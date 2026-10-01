@@ -11,6 +11,7 @@ import { Link } from "react-router";
 import { Mascot } from "../components/Mascot";
 import { DispenserArt } from "../components/NutritionIllustrations";
 import { PricingCards } from "../components/PricingCards";
+import { PlanComparison } from "../components/PlanComparison";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { VideoSection } from "../components/VideoSection";
@@ -156,10 +157,11 @@ export function Landing() {
               Your nutrition. <em>Your subscription.</em>
             </h2>
           </div>
-          <PricingCards compact />
+          <PricingCards />
           <p className="pricing-note">{PRICING_NOTE}</p>
+          <PlanComparison />
           <Link className="text-link pricing-details-link" to="/pricing">
-            Compare all plans <ArrowRight size={16} />
+            More about pricing <ArrowRight size={16} />
           </Link>
         </section>
         <section className="landing-cta">

@@ -171,6 +171,131 @@
   font-size: 14px;
 }
 
+.plan-comparison {
+  margin-top: 65px;
+}
+
+.comparison-intro {
+  margin-bottom: 28px;
+}
+
+.comparison-intro h3 {
+  font-family: var(--serif);
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.comparison-intro p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.comparison-scroll-hint {
+  display: none;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.comparison-table-wrap {
+  position: relative;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fffefa;
+}
+
+.comparison-table-wrap:focus-visible {
+  outline: 3px solid #8aab52;
+  outline-offset: 4px;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 19px 22px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.comparison-table thead th {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.comparison-table th {
+  font-weight: 500;
+}
+
+.comparison-table tr > th:first-child:not([colspan]) {
+  width: 40%;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  background: #fffefa;
+}
+
+.comparison-table td,
+.comparison-table thead th:not(:first-child) {
+  text-align: center;
+}
+
+.comparison-plan-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.comparison-plan-price {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.comparison-plan-price small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.comparison-featured {
+  background: #eef4e8;
+}
+
+.comparison-group th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  color: var(--green);
+  font-weight: 600;
+  background: #e8efdf;
+}
+
+.comparison-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.comparison-status.is-included {
+  color: var(--green);
+}
+
+.comparison-table tbody:last-child tr:last-child > * {
+  border-bottom: 0;
+}
+
 @media (max-width: 1000px) {
   .pricing-grid {
     gap: 16px;
@@ -219,5 +344,67 @@
 
   .pricing-faq-grid {
     gap: 26px;
+  }
+
+  .plan-comparison {
+    margin-top: 45px;
+  }
+
+  .comparison-scroll-hint {
+    display: block;
+  }
+
+  .comparison-table tr > th:first-child:not([colspan]) {
+    width: 150px;
+  }
+
+  .comparison-table {
+    min-width: 630px;
+  }
+
+  .comparison-plan-price small {
+    display: block;
+  }
+
+  .comparison-status > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .comparison-table-wrap {
+    max-height: 75vh;
+  }
+
+  .comparison-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fffefa;
+  }
+
+  .comparison-table thead th.comparison-featured {
+    background: #eef4e8;
+  }
+
+  .comparison-table thead tr > th:first-child:not([colspan]) {
+    z-index: 3;
+  }
+
+  .comparison-group th > span {
+    position: sticky;
+    left: 16px;
+    display: block;
+    width: max-content;
+    max-width: 250px;
   }
 }
